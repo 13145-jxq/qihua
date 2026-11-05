@@ -1,0 +1,288 @@
+:: StoryTitle
+阴缘配
+
+
+:: StoryData
+{
+  "ifid": "3C8AACFF-87FC-4DA6-9427-6B3F4392F586",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "游玩须知",
+  "zoom": 1
+}
+
+
+:: StoryInit {"position":"125,75","size":"100,100"}
+<<set $isLogin to false>>
+<<set $accountList = {
+    "player01": "aaa111",
+    "player02": "bbb222",
+    "player03": "ccc333"
+}>>
+<<run
+let loginSave = localStorage.getItem("yinYuanLoginOk");
+if(loginSave === "true"){
+    SugarCube.State.variables.isLogin = true;
+}
+>>
+
+
+:: 上滑不看 {"position":"175,200","size":"100,100"}
+弹窗信息一闪而过，你并没有点开查看这条短信。
+电视机上还播放着晚间新闻……
+
+<<linkreplace "……">>
+这个时间还有新闻联播吗？
+就在此时，头顶的灯泡发出刺啦刺啦的声响，仅仅一瞬，周围变成一片黑暗。
+<<linkreplace"……">>
+停电了吗？
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+[[谁在外面？]]
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+
+
+:: 开门 {"position":"625,275","size":"100,100"}
+门外除了一些散落的纸钱什么也没有，干净的反常。
+
+
+:: 我已确认 {"position":"50,250","size":"100,100"}
+<<if $isLogin is false>>
+<<goto "登录界面">>
+<</if>>
+
+近日，国内多地接连出现封建迷信诈骗案件。不少受害者轻信不法分子说辞，花钱请对方操办求财转运、求子祈福的相关法事，更有甚者受骗购买了阴婚相关的荒唐服务。该类事件牵连广泛，影响重大，一时间成为贴吧上讨论的热点话题。 　　不少网友在发帖倾诉与交流的过程中提及，自己近期频频做起怪梦，梦里反复出现婚嫁仪式、纸媒人、与看不起脸的人拜堂等诡异意象。更有部分人反映，家中或酒店门缝内被塞入了阴婚服务的纸片广告……
+<<linkreplace "继续">>
+
+
+“叮———”
+
+是短信的提示音，现在是7月12日的11：59，你收到了一则广告短信。
+
+
+[[查看短信]]
+[[上滑不看]]
+
+<</linkreplace>>
+
+
+:: 拨号 {"position":"0,475","size":"100,100"}
+收到短信后，你复制了这串座机号码号码拨了过去，嘟嘟声大概响了十多秒后被人接通。
+
+“喂……？”
+
+声音十分沧桑嘲哳，就像有人用长长的指甲在黑板上刮擦一样，难以入耳，如果要分辨声音的主人是和年岁性别，那么听起来至少是七八十岁的老太了。
+
+“有事就到城西的火葬场来吧……”
+她给了你一串地址，如果你是本地人或许会知道，这是本市最大的一家火葬场了。
+
+【获得道具:一言堂地址】
+
+[[继续]]
+
+
+:: 拾起广告卡片 {"position":"425,125","size":"100,100"}
+广告卡片印刷非常简陋，你捡起来时手指沾到了上面黏黏的油墨，闻起来还有股很奇怪的味道，比起墨水更像是脂肪味。
+卡片的设计也并不精美，是很常见的贴在入户门上的那种单色的醒目的大字，写着招财求子点穴阴婚，最底下还有一排手机号:031-4444-xxxx
+
+
+
+[[捡起纸钱]]
+[[开门]]
+[[离开|未命名片段3]]
+
+
+:: 捡起纸钱 {"position":"425,275","size":"100,100"}
+你留意到随广告一同飘落在地的纸钱。它们静静躺在门的阴影里，像早已在此等候许久。
+ 
+你伸手拾起一张，几乎是指尖刚触到纸面的那一刹，纸钱猛地燃了起来。青绿色的磷火险些烧到你的手指，恍惚间，你仿佛听到门口出来了孩童的笑声。
+
+是巧合吗？
+
+[[拾起广告卡片]]
+[[开门]]
+[[离开|结局三·奇怪的夜晚]]
+
+
+:: 未命名片段3 {"position":"300,325","size":"100,100"}
+你盯着地上散着的纸钱和黄底广告，没有半分留恋的决定离开，继续忙自己的事。
+
+在你转身时，门后突然飘出吱呀一声轻响，混着细细碎碎的孩童的交谈声和一种奇怪的声响，分不清是在哭嚎还是憋着偷笑，时远时近……
+
+嗒——嗒——
+
+有水慢慢从门槛底下漫出来，晕开广告上的厚油墨，把纸钱泡烂。
+
+<<linkreplace "……">>
+为什么要走呢？
+<<linkreplace "为什么呢？">>
+为什么？？？
+<<linkreplace "？？？？？？？？">>
+冷风猛地裹上来，后颈一凉。脑袋嗡的一下像被什么东西击中，身子不受控地往后倒，重重砸在地上，意识瞬间消散在黑暗之中。
+
+[[结局一“善财”童子]]
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+
+
+
+:: 查看短信 {"position":"0,350","size":"100,100"}
+您是否最近夜里多梦，时常惊醒难以入睡？是否在梦中总被穿着嫁衣的人纠缠？缘分天定，执念难消，若您感到困扰，请随时联系哦|专业解梦、消灾、求财、送子、配阴婚、刨坟|联系电话:031-4444-xxxx，如需其他业务尽可询问～
+
+[[拨号]]
+[[离开]]
+
+
+:: 游玩须知 {"position":"50,150","size":"100,100"}
+
+企划可能含有强制结婚、阴婚、违反他人意愿、实施人身束缚与精神控制、诈骗、血腥暴力虐待色情、赌博、滥用药物、ntr、大量死亡情节、大量尸体与恐怖内容、非双洁、二婚、骗婚、挖坟掘墓等等反人类内容，以上皆为虚构，仅作为娱乐，与现实脱节，不具备理论考据性，请勿以专业眼光对企划中民俗内容进行评判，同时也不支持任何迷信行为，请勿模仿。企划内容、道德观念、角色行为不代表企组三观及皮下行为，请勿对企组进行人身攻击。企划内容不涉及对现实人物或事件的影射，请勿对号入座。　　企组及企划内容不含任何引战、隐喻、反串、碰瓷等行为，阴婚题材仅作为娱乐性质的XP出现。
+本章仅作为测试游玩，可能还有恐怖或刺激性内容，请谨慎观看。
+
+[[我已确认]]
+
+
+
+
+:: 登录成功 {"position":"325,75","size":"100,100"}
+<<set $isLogin = true>>
+<div style="text-align:center">
+<p style="color:#bb3333">验证通过。</p>
+<<link "继续剧情">><<goto "查看短信">><</link>>
+<<link "退出登录">>
+<<run
+State.variables.isLogin = false;
+localStorage.removeItem("yinYuanLoginOk");
+>>
+<<goto "登录界面">>
+<</link>>
+</div>
+
+
+:: 登录界面 {"position":"225,75","size":"100,100"}
+<div id="loginBox" style="border:1px solid #333;padding:1.8em;border-radius:8px;max-width:340px;margin:2em auto;background:#0c0c0c;color:#ddd">
+<h3 style="text-align:center;color:#bb3333">阴缘配 · 身份验证</h3>
+账号：<<textbox "_inputAcc" "">>
+<br>
+密码：<input type="password" id="pwdInput">
+<br><br>
+<<link "提交验证">>
+<<run
+let acc = State.variables._inputAcc.trim();
+let pwd = $("#pwdInput").val().trim();
+// 去账号列表匹配
+if( State.variables.accountList[acc] === pwd ){
+    State.variables.isLogin = true;
+    localStorage.setItem("yinYuanLoginOk","true");
+    <<goto "登录成功">>
+}else{
+    <<replace "#msg">>
+    <span style="color:#ff4444">账号或密码错误</span>
+    <</replace>>
+}
+>>
+<</link>>
+<div id="msg" style="margin-top:12px"></div>
+</div>
+
+
+:: 直接推门 {"position":"350,500","size":"100,100"}
+你打开门，映入眼帘的是两个半人高的纸扎小人，这种形象很常见，是对联或福字底下经常画着的金童玉女，两个纸扎小人打着红扑扑的腮红，臂弯挎着竹篮，里面塞着金元宝和厚厚一沓的方孔圆形钱。如果猜的不错，跟飘进你家里的应该是同一个。
+他们跟在一个的身后，那人正在往对门塞小广告，听到你开门的声音，一大两小齐齐转过头，死死的盯着你
+
+<<linkreplace "关门">>
+砰的一声，你关上了房门。
+<<linkreplace "……">>
+这是在做梦吧……
+<</linkreplace>>
+<</linkreplace>>
+
+[[结局二·你看到了？]]
+
+
+:: 离开 {"position":"150,325","size":"100,100"}
+查看过后你便退出了短信页面。
+电视机上还播放着晚间新闻……
+
+<<linkreplace "……">>
+这个时间还有新闻联播吗？
+就在此时，头顶的灯泡发出刺啦刺啦的声响，仅仅一瞬，周围变成一片黑暗。
+<<linkreplace"……">>
+停电了吗？
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+[[谁在外面？]]
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+
+
+:: 结局一“善财”童子 {"position":"175,450","size":"100,100"}
+
+
+
+:: 结局三·奇怪的夜晚 {"position":"575,400","size":"100,100"}
+
+
+
+:: 结局二·你看到了？ {"position":"325,650","size":"100,100"}
+
+
+
+:: 继续 {"position":"0,600","size":"100,100"}
+挂断后你便退出了拨号页面
+电视机上还播放着晚间新闻……
+
+<<linkreplace "……">>
+这个时间还有新闻联播吗？
+就在此时，头顶的灯泡发出刺啦刺啦的声响，仅仅一瞬，周围变成一片黑暗。
+<<linkreplace"……">>
+停电了吗？
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+
+<<linkreplace "咚">>
+[[谁在外面？]]
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+
+
+:: 谁在外面？ {"position":"300,200","size":"100,100"}
+环境描写……
+你打着手机的手电筒走到门口。
+一张黄色的印刷着大字油墨的广告卡片从门口飘了进来，与它一同到访的还有几枚纸钱。
+
+这是恶作剧吧？
+
+[[拾起广告卡片]]
+[[捡起纸钱]]
+[[直接推门]]
+[[离开|未命名片段3]]
